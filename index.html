@@ -3,148 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Untuk Muhammad Rayhan</title>
+    <title>Semangat untuk Rayhan!</title>
     <style>
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
         }
 
         body {
-            background-color: #121212;
+            /* Latar belakang gelap untuk menonjolkan elemen cyan menyala */
+            background: radial-gradient(circle, #1a1a1a 0%, #000000 100%);
             color: #ffffff;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            text-align: center;
             padding: 20px;
+            text-align: center;
+            overflow: hidden;
         }
 
         .card {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            padding: 30px;
+            background: rgba(0, 0, 0, 0.7); /* Latar belakang kartu transparan gelap */
+            backdrop-filter: blur(10px); /* Efek blur kaca */
+            border: 2px solid #00ffff; /* Garis tepi biru cyan menyala */
             border-radius: 20px;
+            padding: 40px 25px;
             max-width: 450px;
             width: 100%;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            /* Bayangan bercahaya (glowing shadow) biru cyan */
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.5), inset 0 0 10px rgba(0, 255, 255, 0.2);
+            transition: box-shadow 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            /* Efek bercahaya lebih kuat saat mouse di atas kartu */
+            box-shadow: 0 0 30px rgba(0, 255, 255, 0.8), inset 0 0 15px rgba(0, 255, 255, 0.4);
         }
 
         h1 {
-            color: #ff4b2b;
             font-size: 1.8rem;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+            color: #00ffff; /* Judul biru cyan menyala */
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            /* Efek neon bercahaya untuk judul */
+            text-shadow: 0 0 5px rgba(0, 255, 255, 0.8), 0 0 10px rgba(0, 255, 255, 0.5);
         }
 
-        h2 {
-            font-size: 1.2rem;
-            font-weight: 400;
-            margin-bottom: 20px;
-            color: #e0e0e0;
-        }
-
-        .message-box {
-            background: rgba(0, 0, 0, 0.3);
-            padding: 20px;
-            border-radius: 12px;
-            margin-bottom: 25px;
+        p {
+            font-size: 1rem;
             line-height: 1.6;
-            font-size: 0.95rem;
-            color: #d1d1d1;
+            color: #e0e0e0;
+            margin-bottom: 25px;
         }
 
         .btn {
-            background: linear-gradient(45deg, #ff416c, #ff4b2b);
-            color: white;
-            border: none;
-            padding: 12px 25px;
+            background: #00ffff; /* Latar belakang tombol biru cyan */
+            border: 2px solid #00ffff; /* Garis tepi tombol biru cyan */
+            color: #000000; /* Teks tombol hitam */
+            padding: 12px 28px;
             font-size: 1rem;
+            font-weight: bold;
             border-radius: 25px;
             cursor: pointer;
-            transition: transform 0.2s, box-shadow 0.2s;
+            transition: all 0.2s ease-in-out;
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
         }
 
         .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(255, 75, 43, 0.4);
+            transform: translateY(-3px);
+            background: transparent; /* Latar belakang tombol transparan saat dihover */
+            color: #00ffff; /* Teks tombol biru cyan saat dihover */
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
         }
 
         .hidden-message {
             display: none;
             margin-top: 20px;
-            padding-top: 15px;
-            border-top: 1px dashed rgba(255, 255, 255, 0.2);
-            font-size: 1rem;
-            color: #ff8a80;
-            animation: fadeIn 1s forwards;
+            padding-top: 20px;
+            border-top: 2px dashed rgba(0, 255, 255, 0.3); /* Garis pemisah putus-putus biru cyan */
+            animation: fadeIn 0.8s ease-in-out forwards;
+        }
+
+        .hidden-message p strong {
+            color: #00ffff; /* Teks tebal dalam pesan tersembunyi biru cyan */
+            text-shadow: 0 0 5px rgba(0, 255, 255, 0.8);
         }
 
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
         }
-
-        .floating-heart {
-            position: fixed;
-            font-size: 20px;
-            color: #ff4b2b;
-            user-select: none;
-            pointer-events: none;
-            animation: floatUp 3s linear forwards;
-        }
-
-        @keyframes floatUp {
-            0% { opacity: 1; transform: translateY(0) scale(1); }
-            100% { opacity: 0; transform: translateY(-100vh) scale(1.5); }
-        }
     </style>
 </head>
 <body>
 
     <div class="card">
-        <h1>Happy Birthday! 🎉</h1>
-        <h2>Untuk Muhammad Rayhan ❤️️</h2>
+        <h1>Pesan Khusus Rayhan ✨</h1>
+        <p>Hai Muhammad Rayhan, apa pun tantangan yang sedang kamu hadapi hari ini, ingatlah bahwa kamu luar biasa kuat dan mampu menaklukkannya!</p>
+        
+        <button class="btn" onclick="showMessage()">Klik Kalau Kamu Lelah 💙</button>
 
-        <div class="message-box">
-            <p>Selamat ulang tahun, Rayhan! Semoga di usia yang baru ini, kamu selalu diberikan kesehatan, kebahagiaan, dan kemudahan dalam setiap langkahmu.</p>
-            <br>
-            <p>Terima kasih sudah menjadi sosok yang selalu ada, sabar, dan membawa banyak kehangatan. Semoga semua impian dan cita-citamu perlahan bisa tercapai ya.</p>
-        </div>
-
-        <button class="btn" onclick="showSurprise()">Klik di sini 🎁</button>
-
-        <div id="surprise" class="hidden-message">
-            <p>I'm so grateful to have you in my life. Tetap jadi Rayhan yang aku kenal ya! Love you! ❤️</p>
+        <div class="hidden-message" id="extraMessage">
+            <p><strong>Pesan untukmu:</strong> Lelah itu wajar, tapi jangan biarkan itu menghentikanmu. Istirahat sejenak, pulihkan semangatmu, lalu bangkit lagi. Aku di sini selalu mendukung setiap langkahmu! Teruslah melangkah, Rayhan! 🚀✨</p>
         </div>
     </div>
 
     <script>
-        function showSurprise() {
-            const surpriseDiv = document.getElementById('surprise');
-            surpriseDiv.style.display = 'block';
-
-            // Efek memunculkan banyak ikon hati
-            for (let i = 0; i < 15; i++) {
-                setTimeout(createHeart, i * 150);
+        function showMessage() {
+            var msg = document.getElementById('extraMessage');
+            if (msg.style.display === 'none' || msg.style.display === '') {
+                msg.style.display = 'block';
+            } else {
+                msg.style.display = 'none';
             }
-        }
-
-        function createHeart() {
-            const heart = document.createElement('div');
-            heart.classList.add('floating-heart');
-            heart.innerHTML = '❤️';
-            heart.style.left = Math.random() * 100 + 'vw';
-            heart.style.bottom = '0px';
-            heart.style.animationDuration = (Math.random() * 2 + 2) + 's';
-            document.body.appendChild(heart);
-
-            setTimeout(() => {
-                heart.remove();
-            }, 4000);
         }
     </script>
 
